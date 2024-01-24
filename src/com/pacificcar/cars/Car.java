@@ -20,4 +20,14 @@ public class Car {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "engine=" + engine +
+                ", cylinders=" + cylinders +
+                ", name='" + name + '\'' +
+                ", wheels=" + wheels +
+                '}';
+    }
 }
