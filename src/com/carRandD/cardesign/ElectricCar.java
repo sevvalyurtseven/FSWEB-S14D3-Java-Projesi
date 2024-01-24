@@ -10,6 +10,17 @@ public class ElectricCar extends CarSkeleton {
         this.batterySize = batterySize;
     }
 
+    @Override
+    public String startEngine() {
+       super.startEngine();
+       return getName() + " car starting";
+    }
+
+    @Override
+    public String drive() {
+        return "run from Electric car";
+    }
+
     public double getAvgKmPerCharge() {
         return avgKmPerCharge;
     }

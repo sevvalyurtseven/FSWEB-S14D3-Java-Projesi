@@ -10,6 +10,17 @@ public class GasPoweredCar extends CarSkeleton {
         this.cylinders = cylinders;
     }
 
+    @Override
+    public String startEngine() {
+        super.startEngine();
+        return getName() + " car starting";
+    }
+
+    @Override
+    public String drive() {
+        return "run from Gas Powered car";
+    }
+
     public double getAvgKmPerLitre() {
         return avgKmPerLitre;
     }
