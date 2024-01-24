@@ -15,6 +15,25 @@ public class Car {
         this.wheels = 4;
     }
 
+    public String startEngine(){
+        printSimpleName();
+        return "the car's engine is starting";
+    }
+
+    public String accelerate(){
+        printSimpleName();
+        return "the car is accelerating";
+    }
+
+    public String brake(){
+        printSimpleName();
+        return "the car is braking";
+    }
+
+    private void printSimpleName(){
+        System.out.println("Class Name: "+ getClass().getSimpleName());
+    }
+
     public int getCylinders() {
         return cylinders;
     }
