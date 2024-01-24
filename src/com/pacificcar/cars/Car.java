@@ -12,4 +12,12 @@ public class Car {
         this.engine = Boolean.TRUE;
         this.wheels = 4;
     }
+
+    public int getCylinders() {
+        return cylinders;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
