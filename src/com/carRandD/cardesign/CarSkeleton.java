@@ -23,6 +23,22 @@ public class CarSkeleton {
 
     protected void runEngine(CarSkeleton carSkeleton){
         System.out.println(carSkeleton.getClass().getSimpleName());
+        if(carSkeleton instanceof ElectricCar){
+            double kmPerCharge = ((ElectricCar)carSkeleton).getAvgKmPerCharge();
+            double batterySize = ((ElectricCar)carSkeleton).getBatterySize();
+            System.out.println("The car engine is starting with electric. Per charge: " + kmPerCharge + " Battery Size: " + batterySize);
+        }
+        else if(carSkeleton instanceof HybridCar){
+            HybridCar hybridCar = ((HybridCar)carSkeleton);
+            System.out.println("The car engine is starting with hybrid. Per charge: " + hybridCar.getAvgKmPerLitre() + " Battery Size: " + hybridCar.getBatterySize() + "Cylinder: " + hybridCar.getCylinders());
+        }
+        else if(carSkeleton instanceof GasPoweredCar){
+            GasPoweredCar gasPoweredCar = ((GasPoweredCar)carSkeleton);
+            System.out.println("The car engine is starting with gas powered. Per charge: " + gasPoweredCar.getAvgKmPerLitre() + "Cylinder: " + gasPoweredCar.getCylinders());
+        }
+        else {
+            System.out.println("Invalid car type!");
+        }
     }
 
     public String getName() {

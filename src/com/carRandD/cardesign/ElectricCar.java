@@ -12,7 +12,7 @@ public class ElectricCar extends CarSkeleton {
 
     @Override
     public String startEngine() {
-       super.startEngine();
+       runEngine(this);
        return getName() + " car starting";
     }
 
